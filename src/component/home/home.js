@@ -7,6 +7,7 @@ const Home = () => {
     isPending,
     error,
   } = UseFetch("http://localhost:8000/blogs");
+
   return (
     <div className="home content">
       {error && <div>{error}</div>}
@@ -14,6 +15,6 @@ const Home = () => {
       {blogs && <BlogList blogs={blogs} title="All Blogs!" />}
     </div>
   );
-};
+}; 
 
 export default Home;
